@@ -20,9 +20,11 @@ passport.use(new GoogleStrategy({
   //store data
    if(!user){
        user=await userModel.create({
-           email:profile._json.email,
-           password: uuidv4(),
-           role:["customer"]
+        userName:profile._json.userName,
+        email:profile._json.email,
+        password: uuidv4(),
+        cpassword:uuidv4(),
+        mobilephone:profile._json. mobilephone,
        })
    }  
    
