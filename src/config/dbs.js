@@ -2,7 +2,7 @@ const mongoose=require("mongoose");
 
 require("dotenv").config();
 const connect=()=>{
-    console.log("Happy Happy Keep smile I am Connected");
+    console.log("Happy Happy");
     return mongoose.connect(process.env.MONGODB_URL)
 
 }

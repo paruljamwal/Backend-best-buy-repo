@@ -11,13 +11,9 @@ passport.use(new GoogleStrategy({
   },
  
  async function(accessToken, refreshToken, profile, cb) {
-     // console.log(profile._json.email);
-      //randon & unique string uuid
-     // console.log(uuidv4()); // ⇨ '1b9d6bcd-bbfd-4b2d-9b5d-ab8dfbbd4bed'
-    //User.findOrCreate({ googleId: profile.id }, function (err, user) {
-     // console.log(accessToken, refreshToken, profile)
+    
    let user=await userModel.findOne({email: profile?._json?.email}).lean().exec();
-  //store data
+  
    if(!user){
        user=await userModel.create({
            email:profile._json.email,
