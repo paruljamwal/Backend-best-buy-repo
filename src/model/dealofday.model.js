@@ -1,6 +1,16 @@
 
 const mongoose=require("mongoose");
 
+
+
+
+
+
+
+
+
+
+
 const dealofdaySchema =new mongoose.Schema({
     image:{type:String,require:true},
     name:{type:String,require:true},
@@ -14,6 +24,19 @@ const dealofdaySchema =new mongoose.Schema({
     timestamps:true,
     versionKey:false
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 const dealofdayModel=mongoose.model("dealofday",dealofdaySchema);
