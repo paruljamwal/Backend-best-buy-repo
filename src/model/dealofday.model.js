@@ -1,4 +1,4 @@
-//businee work inside it
+
 const mongoose=require("mongoose");
 
 const dealofdaySchema =new mongoose.Schema({

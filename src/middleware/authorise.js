@@ -1,5 +1,4 @@
-//middleware ---add some role
-//roles=["seller","admin"];
+
 //closure
 const authorise = (roles) => {
     return (req, res, next) => {

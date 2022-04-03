@@ -6,17 +6,24 @@ const {register,login,generatetoken}=require("./controller/authcontroler");
 const productcontroller=require("./controller/productcontroller");
 const searchcontroller=require("./controller/search.controller");
 const dealofdaycontroller=require("./controller/dealofday.controller");
+
+
+
 const app=express();
+
+
 const passport=require("../src/config/googleauth")
 app.use(express.json());
 app.use(cors());
 app.use("/user",usercontroller);
 
-//directly go to register
+
 
 app.post("/register",register);
 
-// directly goto login
+
+
+
 
 app.post("/login",login);
 

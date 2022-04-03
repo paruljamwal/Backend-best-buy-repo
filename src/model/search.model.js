@@ -13,6 +13,8 @@ const searchschema =new mongoose.Schema({
 });
 
 
+
+
 const searchModel=mongoose.model("search",searchschema);
 
 module.exports=searchModel;

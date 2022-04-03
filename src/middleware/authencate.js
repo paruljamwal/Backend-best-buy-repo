@@ -3,7 +3,7 @@ var jwt = require('jsonwebtoken');
 
 
 const verifytoken=(token)=>{
-    // verify a token symmetric - synchronous
+
     return new Promise((resolve,reject)=>{
    jwt.verify(token,process.env.SECRET_KEY,(err,decoded)=>{
             if(err){
@@ -23,7 +23,7 @@ return res.status(404).send("Authorization token not found or incorrect");
 
 if(!req.headers.authorization.startsWith("Bearer "))
 return res.status(404).send("Authorization token not found or incorrect");
-//only want token
+
 const token=req.headers.authorization.trim().split(" ")[1]
 let decoded;
 try{
