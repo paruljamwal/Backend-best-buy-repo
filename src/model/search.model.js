@@ -1,4 +1,4 @@
-//businee work inside it
+
 const mongoose=require("mongoose");
 const searchschema =new mongoose.Schema({
     imgUrl:{type:String,require:true},
